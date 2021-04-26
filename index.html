@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信息门户</title>
+    <style>
+        * {
+            margin: 0em;
+            padding: 0em;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .clearfix {
+            *zoom: 1;
+            /*IE/7/6*/
+        }
+
+        .clearfix:before,
+        .clearfix:after {
+            content: "";
+            display: table;
+            line-height: 0;
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+
+        .navwrapper {
+            background-color: #8F000B;
+        }
+
+        .nav {
+            width: 88em;
+            height: 2em;
+            margin: 0 auto;
+            background-color: #8F000B;
+        }
+
+        .banner {
+            width: 88em;
+            height: 10em;
+            margin: 0 auto;
+            background-image: url(image/img_xnmh2.gif);
+            background-position: right;
+            background-repeat: no-repeat;
+            background-color: #8F000B;
+            background-size: contain;
+        }
+
+        .content {
+            width: 88em;
+            margin: 0 auto;
+        }
+
+        .footer {
+            width: 88em;
+            height: 3em;
+            margin: 0 auto;
+            background-color: rgb(26, 17, 17);
+            color: whitesmoke;
+            text-align: center;
+        }
+
+        .footerwrapper {
+            background-color: rgb(26, 17, 17);
+        }
+
+        .nav li {
+            display: inline-block;
+            padding: 0 1em;
+            height: 2em;
+            color: white;
+        }
+
+        .nav li:hover {
+            background-color: thistle;
+        }
+
+        .nav a {
+            float: left;
+            color: white;
+            width: 10em;
+        }
+
+        .search {
+            position: absolute;
+            right: 0em;
+            top: 0.2em
+        }
+
+        .search .go {
+            position: absolute;
+            top: 0.2em;
+            right: 0em;
+        }
+
+        .search input {
+            border: none;
+            background-color: #AC0000;
+            width: 10em;
+            height: 2em;
+            vertical-align: middle;
+        }
+
+        .search input:hover {
+            background-color: white;
+        }
+
+        .banner span {
+            margin-left: 1.5em;
+            color: white;
+            font-size: 28pt;
+        }
+
+        .banner img {
+            margin-top: 2em;
+            vertical-align: middle;
+        }
+
+        .school {
+            font-size: 20px;
+            color: darkred;
+            margin: 5px;
+        }
+
+        .notice {
+            width: 60em;
+            height: 30em;
+            border-width: 2px 1px;
+            border-style: solid;
+            border-color: darksalmon gray gray gray;
+            float: left;
+            font-size: 16px;
+        }
+
+        .notice p{
+            margin: 0.5em;
+        }
+
+        .notice p:hover{
+            color: darkred;
+        }
+
+        .right {
+            width: 24em;
+            float: right;
+        }
+
+        .iconlinks {
+            border: 1px solid #ddd;
+        }
+
+        .iconlinks li {
+            /* display: block; */
+            float: left;
+            width: 10em;
+            height: 10em;
+            background-repeat: no-repeat;
+            background-position: 40px 25px;
+            color: rgb(26, 17, 17);
+            background-color: white;
+        }
+
+        .iconlinks li span {
+            display: block;
+            text-align: center;
+        }
+
+        .iconlinks li:hover {
+            color: white;
+            background-color: #8F000B;
+        }
+
+        .iconlinks li.calendar {
+            background-image: url(image/icon-calendar.png);
+        }
+
+        .iconlinks li.calendar:hover {
+            background-image: url(image/icon-calendar-w.png);
+        }
+
+        .iconlinks li.software {
+            background-image: url(image/icon-software.png);
+        }
+
+        .iconlinks li.software:hover {
+            background-image: url(image/icon-software-w.png);
+        }
+
+        .iconlinks li.card {
+            background-image: url(image/icon-card.png);
+        }
+
+        .iconlinks li.card:hover {
+            background-image: url(image/icon-card-w.png);
+        }
+
+        .iconlinks li.freeclass {
+            background-image: url(image/icon-freeclassroom.png);
+        }
+
+        .iconlinks li.freeclass:hover {
+            background-image: url(image/icon-freeclassroom-w.png);
+        }
+
+        .iconlinks li.network {
+            background-image: url(image/icon-network.png);
+        }
+
+        .iconlinks li.network:hover {
+            background-image: url(image/icon-network-w.png);
+        }
+
+        .iconlinks li.repair {
+            background-image: url(image/icon-repair.png);
+        }
+
+        .iconlinks li.repair:hover {
+            background-image: url(image/icon-repair-w.png);
+        }
+
+        .qrcodes li {
+            float: left;
+        }
+
+        .qrcodes img {
+            width: 9em;
+            margin: 1em
+        }
+
+        ::selection{
+            background-color: #AC0000;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navwrapper">
+            <div class="nav">
+                <a href='http://www.pku.edu.cn'>您好，请登录</a>
+                <ul>
+                    <li>
+                        <img src="image/biz-icon-life-w.png" width='20'>
+                    </li>
+                    <li>燕云直播</li>
+                    <li>网络服务</li>
+                    <li>北大邮箱</li>
+                    <li>客户端</li>
+                </ul>
+                <div class="search">
+                    <input type="text" placeholder="找人">
+                    <div class='go'><img src="image/search_go.png"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="banner">
+            <img src="image/pkulogo_white.svg">
+            <span>校内信息门户</span>
+        </div>
+
+        <div class="content clearfix">
+            <div class="school">
+                学校公告
+            </div>
+            <div class="notice">
+                <p>预防电信网络诈骗提醒04-16</p>
+                <p>关于调整北京大学重点实验室管理委员会名称和组成人员的通知04-16</p>
+                <p>关于召开2020届毕业生专场学位授予仪式的通知04-16</p>
+                <p>2021年4月22日校领导接待日安排通知04-14</p>
+                <p>关于召开北京大学外事工作培训会的通知04-14</p>
+                <p>2021年4月8日校领导接待日安排通知03-31</p>
+                <p>关于清明节期间严明纪律要求的通知03-30</p>
+            </div>
+            <div class="right clearfix">
+                <div class="iconlinks clearfix">
+                    <ul>
+                        <li class="calendar"><span>校历</span></li>
+                        <li class="software"><span>正版软件</span></li>
+                        <li class="network"><span>网费充值</span></li>
+                        <li class="card"><span>校园卡充值</span></li>
+                        <li class="freeclass"><span>空闲教室</span></li>
+                        <li class='repair'><span>后勤报修</span></li>
+                    </ul>
+                </div>
+                <div class="qrcodes">
+                    <ul>
+                        <li><a href="#"><img src="image/PKU_QRcode.png"></a></li>
+                        <li><a href=""><img src="image/bdxxfw.png"></a></li>
+                        <li><a href=""><img src="image/网关.png"></a></li>
+                        <li><a href=""><img src="image/pkuccweibo.png"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footerwrapper">
+            <div class="footer">
+                地址：北京市海淀区颐和园路5号邮编：100871邮箱：sermis@pku.edu.cn服务热线：010-62751023
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
